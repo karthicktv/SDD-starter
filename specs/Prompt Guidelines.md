@@ -1,5 +1,8 @@
 
 🔷 1. Foundation Prompt (Always Start Here)
+
+# 📋 How to Use the Specs in This Repository
+
 Use this to force spec-first thinking before any code is written.
 You are a senior software architect.
 
