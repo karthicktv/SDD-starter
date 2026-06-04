@@ -1,0 +1,70 @@
+You are an expert software engineer working in a consulting team.
+CONTEXT
+We are building a small, production-ready “Customer Directory” service for a client.
+They want a REST API that can run locally and in Kubernetes later.
+The client is security-conscious (public sector style), wants good logging/metrics/tracing, and expects tests and documentation.
+TECH STACK
+- Language: TypeScript
+- Runtime: Node.js (LTS)
+- Framework: Fastify (preferred) OR Express if needed
+- Observability: OpenTelemetry (traces + metrics), JSON structured logs
+- Persistence: SQLite for local demo (file-based), using Prisma ORM
+- Auth: API key header (x-api-key) for simplicity
+- Dev tooling: ESLint + Prettier
+- Packaging: Dockerfile + docker-compose
+FUNCTIONAL REQUIREMENTS
+1) API endpoints:
+   - GET /health (returns ok + version)
+   - GET /customers?search=&page=&pageSize=
+   - GET /customers/:id
+   - POST /customers
+   - PUT /customers/:id
+   - DELETE /customers/:id
+2) Customer model:
+   - id (uuid)
+   - name (string, required)
+   - email (string, unique, required)
+   - phone (string, optional)
+   - createdAt, updatedAt
+3) Validation:
+   - Proper request validation with helpful error messages
+   - Email format validation
+4) Pagination:
+   - page defaults to 1, pageSize defaults to 20, max pageSize 100
+5) Search:
+   - case-insensitive search on name and email
+NON-FUNCTIONAL REQUIREMENTS
+- Security:
+  - All endpoints except /health require x-api-key
+  - Reject missing/invalid keys with 401 and standard JSON error format
+- Observability:
+  - Add OpenTelemetry instrumentation for HTTP + Prisma + custom spans
+  - Include correlation IDs and structured JSON logs
+  - Expose /metrics endpoint (Prometheus format) protected by API key
+- Reliability:
+  - Centralized error handler (no stack traces in responses)
+  - Graceful shutdown support
+- Testing:
+  - Unit tests for validation + service layer
+  - Integration tests for API endpoints using an in-memory or temp SQLite DB
+- Docs:
+  - README with setup steps, sample curl commands, environment variables
+  - Provide an OpenAPI spec (Swagger) and expose /docs
+DELIVERABLES
+- A complete repo structure with:
+  - src/ (routes, controllers, services, db, telemetry)
+  - prisma/ schema and migrations
+  - tests/
+  - Dockerfile + docker-compose.yml
+  - README.md
+- Include sample .env.example
+QUALITY GATES (must pass)
+- npm test passes
+- npm run lint passes
+- npm run build succeeds
+- Running locally: docker compose up starts API and the service is usable
+WORK STYLE
+- Explain your approach briefly first (architecture + folder layout)
+- Then implement in logical steps
+- After implementation, list exact commands to run and verify
+- Keep code clean and production-like (no shortcuts)
