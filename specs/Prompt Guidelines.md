@@ -1,7 +1,5 @@
 
-🔷 1. Foundation Prompt (Always Start Here)
-
-# 📋 How to Use the Specs in This Repository
+# 🔷 1. Foundation Prompt (Always Start Here)
 
 Use this to force spec-first thinking before any code is written.
 You are a senior software architect.
@@ -26,7 +24,7 @@ Requirements:
 
 Make it suitable for enterprise use (production-grade, secure, observable).
 
-🔷 2. Refinement Prompt (Iterative Spec Improvement)
+# 🔷 2. Refinement Prompt (Iterative Spec Improvement)
 Review the specification above.
 
 Act as:
@@ -48,7 +46,7 @@ Then:
 
 Keep everything in plain English and structured.
 
-🔷 3. API Contract Prompt
+# 🔷 3. API Contract Prompt
 Based on the specification, define the API contracts.
 
 Include:
@@ -66,7 +64,7 @@ Make this:
 
 Avoid implementation details.
 
-🔷 4. Data Model & Storage Prompt
+# 🔷 4. Data Model & Storage Prompt
 Design the data model based on the specification.
 
 Include:
@@ -82,7 +80,7 @@ Also explain:
 
 Keep it platform-neutral unless specified.
 
-🔷 5. Architecture Design Prompt
+# 🔷 5. Architecture Design Prompt
 Create a high-level system architecture based on the specification.
 
 Include:
@@ -100,7 +98,7 @@ Also include:
 
 Make this suitable for a consulting client presentation.
 
-🔷 6. Implementation Plan Prompt
+# 🔷 6. Implementation Plan Prompt
 Create a step-by-step implementation plan from the specification.
 
 Include:
@@ -113,7 +111,7 @@ Include:
 
 Make it realistic for an enterprise delivery team.
 
-🔷 7. Code Generation Prompt (Only After Spec is Final)
+# 🔷 7. Code Generation Prompt (Only After Spec is Final)
 Now implement the system based strictly on the approved specification.
 
 Constraints:
@@ -130,7 +128,7 @@ Tech stack:
 
 Do NOT deviate from the specification unless explicitly justified.
 
-🔷 8. Test Strategy Prompt
+#🔷 8. Test Strategy Prompt
 Create a comprehensive test plan.
 
 Include:
@@ -145,7 +143,7 @@ Also:
 - Identify critical test scenarios
 - Suggest automation strategy
 
-🔷 9. Production Readiness Prompt (Brilliant for your consulting use)
+# 🔷 9. Production Readiness Prompt (Brilliant for your consulting use)
 Evaluate if this system is production-ready.
 
 Check for:
@@ -163,7 +161,7 @@ List:
 
 Answer as if presenting to a client go-live review board.
 
-🔷 10. “Consulting Mode” Prompt (Your superpower 💡)
+# 🔷 10. “Consulting Mode” Prompt (Your superpower 💡)
 Matches exactly what you’re doing in enterprise architecture work:
 Act as a consulting architect.
 
@@ -183,7 +181,7 @@ Suggest:
 
 Keep it executive-friendly.
 
-🔷 🔥 Pro Tips (Based on your style + what works best)
+# 🔷 🔥 Pro Tips (Based on your style + what works best)
 From your own internal prompt deck: 
 👉 “Vague prompts → shallow output. Clear constraints → production-ready output.” 1
 So:
